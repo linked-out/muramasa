@@ -1,0 +1,86 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LinkedOut</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <style>
+        .navbar {
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        .linkedin-blue {
+            background: #283e4a;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar linkedin-blue">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="<?php echo base_url('home') ?>">
+                <i class="is-white fab fa-linkedin fa-2x has-text-white"></i>
+            </a>
+        </div>
+
+        <div id="" class="navbar-menu">
+            <div class="navbar-start">
+                <div class="navbar-item" href="https://bulma.io/">
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="text" placeholder="Search">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="has-text-white" href="<?php echo base_url('home') ?>">
+                                <i class="fas fa-home fa-lg" style="display: block; text-align: center"></i>
+                                <small style="text-align: center">Home</small>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="has-text-white" href="<?php echo base_url('network') ?>">
+                                <i class="fas fa-user-friends fa-lg" style="display: block; text-align: center"></i>
+                                <small style="text-align: center">Jaringan Saya</small>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="has-text-white" href="<?php echo base_url('notif') ?>">
+                                <i class="fas fa-bell fa-lg" style="display: block; text-align: center"></i>
+                                <small style="text-align: center">Notifikasi</small>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
