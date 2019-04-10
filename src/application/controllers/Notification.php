@@ -6,7 +6,8 @@ class Notification extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('navigation_bar');                
+        $this->load->view('navigation_bar');    
+        $this->load->view('notification_view');            
     }
         
 }
