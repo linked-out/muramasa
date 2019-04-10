@@ -32,13 +32,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
 
         .profile-pic {
+            max-height: 1.45rem;
             display: block;
             border-radius: 50%;
             border: solid 1px white;
         }
 
-        .fa-lg {
-            padding-top: 10px;
+        .fa-2-5 {
+            /* font-size: 17px; */
+            /* padding-top: 10px; */
             margin-bottom: 5px;
         }
 
@@ -74,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="field is-grouped">
                         <p class="control">
                             <a class="has-text-white" href="<?php echo base_url('home') ?>">
-                                <i class="fas fa-home fa-lg" style="display: block; text-align: center"></i>
+                                <i class="fas fa-home fa-2-5" style="display: block; text-align: center"></i>
                                 <small style="text-align: center">Home</small>
                             </a>
                         </p>
@@ -85,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="field is-grouped">
                         <p class="control">
                             <a class="has-text-grey-lighter" href="<?php echo base_url('network') ?>">
-                                <i class="fas fa-user-friends fa-lg" style="display: block; text-align: center"></i>
+                                <i class="fas fa-user-friends fa-2-5" style="display: block; text-align: center"></i>
                                 <small style="text-align: center">Jaringan Saya</small>
                             </a>
                         </p>
@@ -96,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="field is-grouped">
                         <p class="control">
                             <a class="has-text-grey-lighter" href="<?php echo base_url('notif') ?>">
-                                <i class="fas fa-bell fa-lg" style="display: block; text-align: center"></i>
+                                <i class="fas fa-bell fa-2-5" style="display: block; text-align: center"></i>
                                 <small style="text-align: center">Notifikasi</small>
                             </a>
                         </p>
