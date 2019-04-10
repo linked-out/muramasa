@@ -9,7 +9,11 @@ class Network extends CI_Controller {
         $this->load->view('navigation_bar');
         $this->load->view('network_view');
     }
-        
+
+    public function my_network() {
+        $this->load->view('navigation_bar');
+        $this->load->view('my_network_view');
+    }
 }
         
     /* End of file  Network.php */

@@ -11,7 +11,7 @@
 			</header>
 			<div class="card-content">
 				<div class="content">
-					<a href="" class="has-text-link">lihat semua</a>
+					<a href="<?php echo base_url('network/my_network') ?>" class="has-text-link">lihat semua</a>
 				</div>
 			</div>
 		</div>
