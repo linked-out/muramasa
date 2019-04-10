@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <style>
 
         body {
-            /* height: 100vh; */
+            min-height: 100vh;
             background: rgb(245, 245, 245);
         }
 
