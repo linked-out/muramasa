@@ -108,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
-                            <a class="has-text-grey-lighter" href="<?php echo base_url('notif') ?>">
+                            <a class="has-text-grey-lighter" href="<?php echo base_url('notification') ?>">
                                 <i class="fas fa-bell fa-2-5" style="display: block; text-align: center"></i>
                                 <small style="text-align: center">Notifikasi</small>
                             </a>
