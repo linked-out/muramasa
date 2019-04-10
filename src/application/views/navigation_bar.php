@@ -16,10 +16,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         .navbar {
             padding-left: 20%;
             padding-right: 20%;
+            padding-top: 0.1px;
         }
 
         .linkedin-blue {
             background: #283e4a;
+        }
+
+        .linkedin-grey {
+            color: rgb(245, 245, 245);
+        }
+
+        .navbar-item {
+            padding: .05rem .75rem;
+        }
+
+        .profile-pic {
+            display: block;
+            border-radius: 50%;
+            border: solid 1px white;
+        }
+
+        .fa-lg {
+            padding-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .nav-active {
+            border-bottom: solid white 5px;
         }
 
     </style>
@@ -46,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="navbar-end">
-                <div class="navbar-item">
+                <div class="nav-active navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
                             <a class="has-text-white" href="<?php echo base_url('home') ?>">
@@ -60,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
-                            <a class="has-text-white" href="<?php echo base_url('network') ?>">
+                            <a class="has-text-grey-lighter" href="<?php echo base_url('network') ?>">
                                 <i class="fas fa-user-friends fa-lg" style="display: block; text-align: center"></i>
                                 <small style="text-align: center">Jaringan Saya</small>
                             </a>
@@ -71,9 +95,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
-                            <a class="has-text-white" href="<?php echo base_url('notif') ?>">
+                            <a class="has-text-grey-lighter" href="<?php echo base_url('notif') ?>">
                                 <i class="fas fa-bell fa-lg" style="display: block; text-align: center"></i>
                                 <small style="text-align: center">Notifikasi</small>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="has-text-grey-lighter" href="<?php echo base_url('profile') ?>">
+                                <img src="https://avatars1.githubusercontent.com/u/24368528?s=400&v=4" alt="" class="profile-pic">
+                                <small style="text-align: center">Saya</small>
                             </a>
                         </p>
                     </div>
