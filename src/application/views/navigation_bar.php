@@ -8,11 +8,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LinkedOut</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <style>
+
+        body {
+            /* height: 100vh; */
+            background: rgb(245, 245, 245);
+        }
+
         .navbar {
             padding-left: 20%;
             padding-right: 20%;
@@ -24,11 +29,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
 
         .linkedin-grey {
-            color: rgb(245, 245, 245);
         }
 
         .navbar-item {
             padding: .05rem .75rem;
+        }
+
+        .card {
+            margin-bottom: 20px;
         }
 
         .profile-pic {
@@ -38,9 +46,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             border: solid 1px white;
         }
 
+        .profile-pic-lg {
+            border-radius: 50%;
+        }
+
         .fa-2-5 {
-            /* font-size: 17px; */
-            /* padding-top: 10px; */
             margin-bottom: 5px;
         }
 
@@ -52,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-    <nav class="navbar linkedin-blue">
+    <nav class="navbar is-fixed-top linkedin-blue">
         <div class="navbar-brand">
             <a class="navbar-item" href="<?php echo base_url('home') ?>">
                 <i class="is-white fab fa-linkedin fa-2x has-text-white"></i>
@@ -118,6 +128,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
     </nav>
-</body>
 
-</html>
