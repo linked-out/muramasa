@@ -101,14 +101,27 @@
 				<small class="has-text-grey-lighter" style="text-align: right; width: 95%">Ad</small>
 			</header>
 			<div class="card-content">
-				<p class="title">
-					“Don't follow your dream, Follow my github”
-				</p>
+				<p class="title" id="typed2" style="height: 100px"></p>
 				<p class="subtitle">- Blinfoldking</p>
+			</div>
 
+			<div class="card-content">
 				<a target="_blank" href="https://github.com/blinfoldking" class="button is-link is-outlined">Follow</a>
 			</div>
 		</div>
+
+		<script>
+			var typed2 = new Typed('#typed2', {
+				strings: [
+					"“Don't follow your dream, Follow my github”"
+				],
+				typeSpeed: 100,
+				backSpeed: 0,
+				fadeOut: true,
+				loop: true
+			});
+
+		</script>
 	</div>
 
 </div>
