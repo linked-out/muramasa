@@ -34,11 +34,16 @@ class User extends CI_Model {
         $this->db->where('email = ', $email);
 
         $query = $this->db->get();
-        return $query->result();
+        return $query->result()[0];
     }
 
-    public function get() {
+    public function get($id) {
+        $this->db->select('*');
+        $this->db->from('USER');
+        $this->db->where('id = ', $id);
 
+        $query = $this->db->get();
+        return $query->result();
     }
 
     public function search($query) {
