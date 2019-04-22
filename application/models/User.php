@@ -42,7 +42,12 @@ class User extends CI_Model {
     }
 
     public function search($query) {
+        $this->db->select('*');
+        $this->db->from('USER');
+        $this->db->like('email', $query, 'both');
 
+        $query = $this->db->get();
+        return $query->result();
     }
 }
                         

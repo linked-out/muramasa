@@ -23,8 +23,6 @@ class Login extends CI_Controller {
         if ($success) {
             header('Location: '. base_url('/home'));
         } else {
-            print_r("failed");
-            die();
             header('Location: '. base_url('/register'));
         }
     }
