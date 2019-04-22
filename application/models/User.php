@@ -14,8 +14,17 @@ class User extends CI_Model {
         $this->db->insert('USER', $user); 
     }
 
-    public function login($username, $password) {
+    public function login($email, $password) {
+        $this->db->select('PASSWORD');
+        $this->db->where('email =', $email);
 
+        $query = $this->db->get();
+
+        if (password_verify($password, $query)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
                         
