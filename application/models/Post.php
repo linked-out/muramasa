@@ -30,6 +30,12 @@ class Post extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('post');
     }
+
+    public function edit($content, $id) {
+        $this->db->set('content', $content);
+        $this->db->where('id', $id);
+        $this->db->update('post');
+    }
 }
                         
 /* End of file Post.php */

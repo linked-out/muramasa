@@ -34,6 +34,15 @@ class Home extends CI_Controller {
         $this->Post->delete($id);
         $this->index();
     }
+
+    public function edit() {
+        $content = $this->input->post('content');
+        $id = $this->input->post('id');
+
+        $this->Post->edit($content, $id);
+
+        $this->index();
+    }
 }
         
     /* End of file  Home.php */
