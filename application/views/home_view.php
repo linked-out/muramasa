@@ -12,7 +12,6 @@
 							echo '<p class="subtitle is-6">' . $user->email . '</p>';
 						}
 						?>
-
 					</div>
 				</div>
 			</header>
@@ -44,6 +43,10 @@
 					<div class="media-content">
 						<p class="title is-6">'.$post->firstname.' '.$post->lastname.'</p>
 						<p class="subtitle is-6">'.$post->email.'</p>
+					</div>
+					<div class="media-right">
+						<a href="'.base_url('home/delete/'.$post->id).'"><i class="fas fa-minus has-text-danger"></i></a>&nbsp;
+						<i class="fas fa-edit has-text-info"></i>
 					</div>
 				</div>
 
