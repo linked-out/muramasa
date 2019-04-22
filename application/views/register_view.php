@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <input required class="is-link button" type="submit" value="Sign In">
                 </div>
             </form>
-            <span>Already on LinkedIn?<a href="" class="is-link">&nbsp; Sign In</a></span>
+            <span>Already on LinkedIn?<a href="" class="is-link">&nbsp; Sign Up</a></span>
         </div>
     </div>
 
