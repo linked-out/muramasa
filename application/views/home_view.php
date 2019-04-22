@@ -17,7 +17,7 @@
 	<div class="column container" style="">
 		<div class="card">
 			<div class="card-content">
-				<a href="" class="content has-text-grey" style="text-decoration: underline">
+				<a id="post-trigger" href="#" class="content has-text-grey" style="text-decoration: underline">
 					<div class="fas fa-edit"></div> Mulai buat posting
 				</a>
 			</div>
@@ -28,8 +28,7 @@
 				<div class="media">
 					<div class="media-left">
 						<figure class="image is-48x48">
-							<img class="profile-pic-lg" src="https://bulma.io/images/placeholders/96x96.png"
-								alt="Placeholder image">
+							<img class="profile-pic-lg" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
 						</figure>
 					</div>
 					<div class="media-content">
@@ -59,8 +58,7 @@
 				<div class="media">
 					<div class="media-left">
 						<figure class="image is-48x48">
-							<img class="profile-pic-lg" src="https://bulma.io/images/placeholders/96x96.png"
-								alt="Placeholder image">
+							<img class="profile-pic-lg" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
 						</figure>
 					</div>
 					<div class="media-content">
@@ -109,7 +107,6 @@
 				<a target="_blank" href="https://github.com/blinfoldking" class="button is-link is-outlined">Follow</a>
 			</div>
 		</div>
-
 		<script>
 			var typed2 = new Typed('#typed2', {
 				strings: [
@@ -120,10 +117,30 @@
 				fadeOut: true,
 				loop: true
 			});
-
 		</script>
 	</div>
 
+	<div id="post-modal" class="modal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<button class="delete" aria-label="close"></button>
+			</header>
+			<div class="modal-card-body">
+				<textarea class="textarea" placeholder="what's on your mind"></textarea>
+			</div>
+			<div class="modal-card-foot">
+				<button class="button is-info">Post</button>
+				<button id="modal-cancel" class="button">Cancel</button>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+	<script>
+		$("#post-trigger").click(() => $('#post-modal').toggleClass('is-active'))
+		$("#post-modal .delete").click(() => $('#post-modal').toggleClass('is-active'))
+		$("#post-modal #modal-cancel").click(() => $('#post-modal').toggleClass('is-active'))
+	</script>
 </div>
 
 </body>
