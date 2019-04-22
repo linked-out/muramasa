@@ -4,8 +4,15 @@
 			<header class="card-header" style="padding: 10px">
 				<div class="media">
 					<div class="media-content">
-						<p class="title is-6">John Smith</p>
-						<p class="subtitle is-6">@johnsmith</p>
+						<?php
+						if (isset($this->session->user)) {
+							$user = $this->session->user;
+							echo 
+							'<p class="title is-6">'.$user->firstname.' '.$user->lastname.'</p>';
+							echo '<p class="subtitle is-6">'.$user->email.'</p>';
+						}
+						?>
+
 					</div>
 				</div>
 			</header>
