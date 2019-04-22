@@ -56,21 +56,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <h2 class="logo title is-3">LinkedOut <i class="has-text-white fa-2x fab fa-linkedin"></i></h2>
         <h3 class="has-text-white title is-4">Make the most of your professional life</h3>
         <div class="form-container container">
-            <form method="POST" action="<?php site_url('/new') ?>" class="form">
+            <form method="POST" action="<?php echo base_url('/register/new') ?>" class="form">
                 <div class="field">
-                    <input class="input" type="text" placeholder="First Name">
+                    <input required name="firstname" class="input" type="text" placeholder="First Name">
                 </div>
                 <div class="field">
-                    <input class="input" type="text" placeholder="Last Name">
+                    <input required name="lastname" class="input" type="text" placeholder="Last Name">
                 </div>
                 <div class="field">
-                    <input class="input" type="email" placeholder="Email">
+                    <input required name="email" class="input" type="email" placeholder="Email">
                 </div>
                 <div class="field">
-                    <input class="input" type="password" placeholder="Password">
+                    <input required name="password" class="input" type="password" placeholder="Password">
                 </div>
                 <div class="field">
-                    <input class="is-link button" type="submit" value="Sign In">
+                    <input required class="is-link button" type="submit" value="Sign In">
                 </div>
             </form>
             <span>Already on LinkedIn?<a href="" class="is-link">&nbsp; Sign In</a></span>
