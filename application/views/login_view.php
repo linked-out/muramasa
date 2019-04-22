@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </form>
         <a href="" class="is-link">Forgot Password?</a><br>
-        <span>New to linkedOut? <a href="" class="is-link">Join Now</a></span>
+        <span>New to linkedOut? <a href="<?php echo base_url('register') ?>" class="is-link">Join Now</a></span>
     </div>
 
     <footer>
