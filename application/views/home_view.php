@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
 <div class="columns" style="padding: 80px 20%">
 	<div class="column is-3">
 		<div class="card">
@@ -41,21 +42,50 @@
 						</figure>
 					</div>
 					<div class="media-content">
-						<p class="title is-6">'.$post->firstname.' '.$post->lastname.'</p>
-						<p class="subtitle is-6">'.$post->email.'</p>
+						<p class="title is-6">' . $post->firstname . ' ' . $post->lastname . '</p>
+						<p class="subtitle is-6">' . $post->email . '</p>
+					</div>';
+		if ($post->user_id == $this->session->user->id)
+		echo
+					'<div class="media-right">
+						<a href="' . base_url('home/delete/' . $post->id) . '"><i class="fas fa-minus has-text-danger"></i></a>&nbsp;
+						<a onClick="edit('.$post->id.',\''.$post->content.'\')" ><i class="fas fa-edit has-text-info"></i></a>
 					</div>
-					<div class="media-right">
-						<a href="'.base_url('home/delete/'.$post->id).'"><i class="fas fa-minus has-text-danger"></i></a>&nbsp;
-						<i class="fas fa-edit has-text-info"></i>
-					</div>
-				</div>
-
-				<div class="content">'.$post->content.'</div>
+				';
+		echo		'
+		</div>
+				<div class="content">' . $post->content . '</div>
 			</div>
 		</div>
 		';
 		}
 		?>
+		<div id="edit-modal" class="modal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<div class="modal-card-head">
+				<button class="delete" aria-label="close"></button>
+			</div>
+			<form method="POST" action="<?php echo base_url('home/edit') ?>">
+				<div class="modal-card-body">
+					<input type="text" name="id" id="edit-id" value="" hidden>
+					<textarea name="content" id="edit-content" class="textarea" placeholder="what's on your mind"></textarea>
+				</div>
+				<div class="modal-card-foot">
+					<input type="submit" class="button is-info" />
+				</div>
+			</form>
+		</div>
+	</div>
+	<script>
+		function edit(id, content) {
+			$('#edit-modal').addClass('is-active');
+			$('#edit-modal .delete').click(() => $('#edit-modal').removeClass('is-active'));
+
+			$('#edit-content').val(content);
+			$('#edit-id').val(id);
+		}
+	</script>
 	</div>
 	<div class="column is-3">
 
@@ -97,12 +127,10 @@
 				</div>
 				<div class="modal-card-foot">
 					<input type="submit" class="button is-info" />
-					<button id="modal-cancel" class="button">Cancel</button>
 				</div>
 			</form>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
 	<script>
 		$("#post-trigger").click(() => $('#post-modal').toggleClass('is-active'))
 		$("#post-modal .delete").click(() => $('#post-modal').toggleClass('is-active'))
