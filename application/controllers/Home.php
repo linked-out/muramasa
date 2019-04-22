@@ -29,6 +29,11 @@ class Home extends CI_Controller {
         $this->Post->new($post);
         $this->index();
     }
+
+    public function delete($id) {
+        $this->Post->delete($id);
+        $this->index();
+    }
 }
         
     /* End of file  Home.php */

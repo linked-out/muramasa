@@ -11,8 +11,8 @@ class Post extends CI_Model
     }
 
     public function get()
-    { 
-        $this->db->select('*');
+    {
+        $this->db->select('post.id, content, user_id, email, firstname, lastname');
         $this->db->from('post');
         $this->db->join('USER', 'post.user_id = USER.id');
 
@@ -23,6 +23,12 @@ class Post extends CI_Model
     public function new($post)
     {
         $this->db->insert('post', $post);
+    }
+
+    public function delete($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('post');
     }
 }
                         
