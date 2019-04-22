@@ -64,76 +64,17 @@
                             <i class="fas fa-briefcase fa-2x"></i>
                         </div>
                         <div class="column" style="border-bottom: solid 1px #ccc">
-                            <div class=""><strong>Some Job TItle</strong></div>
+                            <div style="margin-bottom: 0" class="columns">
+                                <strong class="column is-11">Some Job TItle</strong>
+                                <span>
+                                    <i class="fas fa-minus"></i>
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                            </div>
                             <div class="">Some Company Name</div>
-                            <small>7th Des 2019 - 8th Des 2020</small>
                         </div>
                     </div>
                 </div>
-                <div class="content">
-                    <div class="columns">
-                        <div class="column is-1">
-                            <i class="fas fa-briefcase fa-2x"></i>
-                        </div>
-                        <div class="column" style="border-bottom: solid 1px #ccc">
-                            <div class=""><strong>Some Job TItle</strong></div>
-                            <div class="">Some Company Name</div>
-                            <small>7th Des 2019 - 8th Des 2020</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-header" style="border: none; box-shadow: none">
-                <p class="card-header-title">
-                    Pendidikan
-                </p>
-                <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                        <i class="fas fa-plus" aria-hidden="true"></i>
-                    </span>
-                </a>
-            </div>
-            <div class="card-content">
-                <div class="content">
-                    <div class="columns">
-                        <div class="column is-1">
-                            <i class="fas fa-school fa-2x"></i>
-                        </div>
-                        <div class="column" style="border-bottom: solid 1px #ccc">
-                            <div class=""><strong>Some School Name</strong></div>
-                            <div class="">Some Major Degree</div>
-                            <small>7th Des 2019 - 8th Des 2020</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" style="border: none; box-shadow: none">
-                <p class="card-header-title">
-                    Keahlian
-                </p>
-                <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                        <i class="fas fa-plus" aria-hidden="true"></i>
-                    </span>
-                </a>
-            </div>
-            <div class="card-content">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" style="border: none; box-shadow: none">
-                <p class="card-header-title">
-                    Pencapaian
-                </p>
-                <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                        <i class="fas fa-plus" aria-hidden="true"></i>
-                    </span>
-                </a>
-            </div>
-            <div class="card-content">
             </div>
         </div>
     </div>
