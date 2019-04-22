@@ -22,6 +22,7 @@ class Login extends CI_Controller {
         $success = $this->User->login($email, $password);
         if ($success) {
             $this->session->user = $this->User->self($email);
+            $this->session->is_login = true;
             header('Location: '. base_url('/home'));
         } else {
             header('Location: '. base_url('/register'));
