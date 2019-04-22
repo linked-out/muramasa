@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <h2 class="logo title is-3">LinkedOut <i class="has-text-white fa-2x fab fa-linkedin"></i></h2>
         <h3 class="has-text-white title is-4">Make the most of your professional life</h3>
         <div class="form-container container">
-            <form action="" class="form">
+            <form method="POST" action="<?php site_url('/new') ?>" class="form">
                 <div class="field">
                     <input class="input" type="text" placeholder="First Name">
                 </div>
