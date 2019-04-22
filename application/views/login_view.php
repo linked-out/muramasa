@@ -43,12 +43,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <h2 class="title is-6">LinkedOut <i class="has-text-link fa-2x fab fa-linkedin"></i></h2>
         <h3 class="title is-4">Welcome Back</h3>
         <small>Don't miss your next opportunity. Sign in to stay updated on your professional world.</small>
-        <form action="" class="form">
+        <form method="POST" action="<?php echo base_url('login/try') ?>" class="form">
             <div class="field">
-                <input class="input is-medium" type="email" placeholder="Enter your email">
+                <input required class="input is-medium" type="email" placeholder="Enter your email">
             </div>
             <div class="field">
-                <input class="input is-medium" type="password" placeholder="Enter your password">
+                <input required class="input is-medium" type="password" placeholder="Enter your password">
             </div>
             <div class="field">
                 <input class="is-link button is-medium" type="submit" value="Sign In">
