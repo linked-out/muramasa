@@ -11,9 +11,8 @@ class Register extends CI_Controller {
 
     public function new()
     {
-
-    }
         
+    }
 }
         
     /* End of file  Register.php */
