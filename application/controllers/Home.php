@@ -16,7 +16,19 @@ class Home extends CI_Controller {
         $this->load->view('navigation_bar');
         $this->load->view('home_view', $data);                    
     }           
-    
+   
+    public function post()
+    {
+        $content = $this->input->post('content');
+        $user_id = $this->session->user->id;
+        $post = array(
+            'content' => $content,
+            'user_id' => $user_id,
+        );
+
+        $this->Post->new($post);
+        $this->index();
+    }
 }
         
     /* End of file  Home.php */

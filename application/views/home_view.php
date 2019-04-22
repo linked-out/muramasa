@@ -7,9 +7,9 @@
 						<?php
 						if (isset($this->session->user)) {
 							$user = $this->session->user;
-							echo 
-							'<p class="title is-6">'.$user->firstname.' '.$user->lastname.'</p>';
-							echo '<p class="subtitle is-6">'.$user->email.'</p>';
+							echo
+								'<p class="title is-6">' . $user->firstname . ' ' . $user->lastname . '</p>';
+							echo '<p class="subtitle is-6">' . $user->email . '</p>';
 						}
 						?>
 
@@ -29,7 +29,10 @@
 				</a>
 			</div>
 		</div>
-
+		<?php
+		$posts = array_reverse($posts);
+		foreach ($posts as $post) {
+			echo '
 		<div class="card">
 			<div class="card-content">
 				<div class="media">
@@ -39,19 +42,17 @@
 						</figure>
 					</div>
 					<div class="media-content">
-						<p class="title is-6">John Smith</p>
-						<p class="subtitle is-6">@johnsmith</p>
+						<p class="title is-6">'.$post->firstname.' '.$post->lastname.'</p>
+						<p class="subtitle is-6">'.$post->email.'</p>
 					</div>
 				</div>
 
-				<div class="content">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-				</div>
+				<div class="content">'.$post->content.'</div>
 			</div>
-
 		</div>
-
+		';
+		}
+		?>
 	</div>
 	<div class="column is-3">
 
@@ -87,12 +88,12 @@
 			<div class="modal-card-head">
 				<button class="delete" aria-label="close"></button>
 			</div>
-			<form method="POST" action="">
+			<form method="POST" action="<?php echo base_url('home/post') ?>">
 				<div class="modal-card-body">
 					<textarea name="content" class="textarea" placeholder="what's on your mind"></textarea>
 				</div>
 				<div class="modal-card-foot">
-					<input name="content" type="submit" class="button is-info" />
+					<input type="submit" class="button is-info" />
 					<button id="modal-cancel" class="button">Cancel</button>
 				</div>
 			</form>
