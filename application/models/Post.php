@@ -14,6 +14,7 @@ class Post extends CI_Model
     { 
         $this->db->select('*');
         $this->db->from('post');
+        $this->db->join('USER', 'post.user_id = USER.id');
 
         $query = $this->db->get();
         return $query->result();
