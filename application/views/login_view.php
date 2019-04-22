@@ -45,10 +45,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <small>Don't miss your next opportunity. Sign in to stay updated on your professional world.</small>
         <form method="POST" action="<?php echo base_url('login/try') ?>" class="form">
             <div class="field">
-                <input required class="input is-medium" type="email" placeholder="Enter your email">
+                <input name="email" required class="input is-medium" type="email" placeholder="Enter your email">
             </div>
             <div class="field">
-                <input required class="input is-medium" type="password" placeholder="Enter your password">
+                <input name="password" required class="input is-medium" type="password" placeholder="Enter your password">
             </div>
             <div class="field">
                 <input class="is-link button is-medium" type="submit" value="Sign In">

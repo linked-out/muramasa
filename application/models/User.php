@@ -16,15 +16,33 @@ class User extends CI_Model {
 
     public function login($email, $password) {
         $this->db->select('PASSWORD');
+        $this->db->from('USER');
         $this->db->where('email =', $email);
 
         $query = $this->db->get();
-
-        if (password_verify($password, $query)) {
+        $result = $query->result()[0];
+        if (password_verify($password, $result->PASSWORD)) {
             return true;
         } else {
             return false;
         }
+    }
+
+    public function self($email) {
+        $this->db->select('*');
+        $this->db->from('USER');
+        $this->db->where('email = ', $email);
+
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get() {
+
+    }
+
+    public function search($query) {
+
     }
 }
                         
