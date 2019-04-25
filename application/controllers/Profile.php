@@ -13,8 +13,9 @@ class Profile extends CI_Controller {
     public function index()
     {
         $data['navbar_state'] = 'profile';
+        $data['jobs'] = $this->Job->get($this->session->user->id);
         $this->load->view('navigation_bar', $data);
-        $this->load->view('profile');                
+        $this->load->view('profile', $data);                
     }
 
     public function other($id)

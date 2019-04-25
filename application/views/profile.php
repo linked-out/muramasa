@@ -58,24 +58,35 @@
                     </span>
                 </a>
             </div>
+
             <div class="card-content" style="border-bottom: solid 1px #ccc">
-                <div class="content">
-                    <div class="columns">
-                        <div class="column is-1">
-                            <i class="fas fa-briefcase fa-2x"></i>
-                        </div>
-                        <div class="column" style="border-bottom: solid 1px #ccc">
-                            <div style="margin-bottom: 0" class="columns">
-                                <strong class="column is-11">Some Job TItle</strong>
-                                <span>
-                                    <i class="fas fa-minus"></i>
-                                    <i class="fas fa-edit"></i>
-                                </span>
-                            </div>
-                            <div class="">Some Company Name</div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                if (count($jobs) == 0) {
+                    echo "<h3 class='title is-6'>No Jobs Found</h3>";
+                } else {
+                    foreach ($jobs as $job) {
+                        echo
+                            '<div class="content">
+                                <div class="columns">
+                                    <div class="column is-1">
+                                        <i class="fas fa-briefcase fa-2x"></i>
+                                    </div>
+                                    <div class="column" style="border-bottom: solid 1px #ccc">
+                                        <div style="margin-bottom: 0" class="columns">
+                                            <strong class="column is-11">'.$job->title.'</strong>
+                                            <span>
+                                                <i class="fas fa-minus"></i>
+                                                <i class="fas fa-edit"></i>
+                                            </span>
+                                        </div>
+                                        <div class="">'.$job->company_name.'</div>
+                                    </div>
+                                </div>
+                            </div>';
+                    }
+                }
+                ?>
+
             </div>
         </div>
     </div>
