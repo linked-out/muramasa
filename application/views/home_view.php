@@ -126,7 +126,7 @@
 					<textarea name="content" class="textarea" placeholder="what's on your mind"></textarea>
 				</div>
 				<div class="modal-card-foot">
-					<input type="submit" class="button is-info" />
+					<input type="submit" class="button is-info" value="Submit" />
 				</div>
 			</form>
 		</div>

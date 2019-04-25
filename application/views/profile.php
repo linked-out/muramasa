@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-3.4.0.slim.min.js" integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
 <div class="columns" style="padding: 80px 20%">
     <div class="column container" style="">
         <div class="card">
@@ -52,7 +53,7 @@
                     Pengalaman
                 </p>
                 <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
+                    <span class="icon" id="post-trigger">
                         <i class="fas fa-plus" aria-hidden="true"></i>
                     </span>
                 </a>
@@ -78,6 +79,36 @@
             </div>
         </div>
     </div>
+
+    <div id="post-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <div class="modal-card-head">
+                <button class="delete" aria-label="close"></button>
+            </div>
+            <form method="POST" action="<?php echo base_url('home/post') ?>">
+                <div class="modal-card-body">
+                    <input name="user_id" type="text" hidden value="<?php $this->session->user->id ?>">
+                    <div class="field">
+                        <input name="title" class="input" placeholder="Enter Your Job Title"></input>
+                    </div>
+                    <div class="field">
+                        <input name="company" class="input" placeholder="Enter Your Compnany Name"></input>
+                    </div>
+                </div>
+                <div class="modal-card-foot">
+                    <input type="submit" class="button is-info" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $("#post-trigger").click(() => $('#post-modal').toggleClass('is-active'))
+        $("#post-modal .delete").click(() => $('#post-modal').toggleClass('is-active'))
+        $("#post-modal #modal-cancel").click(() => $('#post-modal').toggleClass('is-active'))
+    </script>
+
+
     <div class="column is-3">
 
         <div class="card">
