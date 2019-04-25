@@ -21,20 +21,20 @@
             <div class="card-content" style="margin-top: 50px">
                 <div class="columns">
                     <div class="column is-8">
-                        <div class="title is-5">Ganesha Danu</div>
-                        <div class="subtitle is-6">iOS Developer at Proofn.id</div>
+                        <div class="title is-5"><?php echo $this->session->user->firstname.' '.$this->session->user->lastname ?></div>
+                        <div class="subtitle is-6"><?php echo count($jobs) > 0 ? $jobs[0]->title : '' ?></div>
                         <div class="subtitle is-6">Bandung, Jawa Barat</div>
                     </div>
                     <div class="column">
                         <table>
                             <tr>
                                 <td><i class="fas fa-briefcase"></i></td>
-                                <td>Proofn Indonesia</td>
+                                <td><?php echo count($jobs) > 0 ? $jobs[0]->company_name : '' ?></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td><i class="fas fa-school"></i></td>
                                 <td>Telkom University</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td><i class="fas fa-user-friends"></i></td>
                                 <td><a href="" class="has-text-link">Lihat Koneksi (10) </a></td>
