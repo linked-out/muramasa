@@ -6,7 +6,8 @@ class Profile extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('navigation_bar');
+        $data['navbar_state'] = 'profile';
+        $this->load->view('navigation_bar', $data);
         $this->load->view('profile');                
     }
 

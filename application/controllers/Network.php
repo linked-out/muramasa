@@ -6,7 +6,8 @@ class Network extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('navigation_bar');
+        $data['navbar_state'] = 'network';
+        $this->load->view('navigation_bar', $data);
         $this->load->view('network_view');
     }
 

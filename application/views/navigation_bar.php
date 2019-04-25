@@ -79,7 +79,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
 
             <div class="navbar-end">
-                <div class="nav-active navbar-item">
+                <div class="<?php if ($navbar_state == "home") echo "nav-active" ?> navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
                             <a class="has-text-white" href="<?php echo base_url('home') ?>">
@@ -90,7 +90,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                 </div>
 
-                <div class="navbar-item">
+                <div class="<?php if ($navbar_state == "network") echo "nav-active" ?>navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
                             <a class="has-text-grey-lighter" href="<?php echo base_url('network') ?>">
@@ -101,7 +101,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </div>
                 </div>
 
-                <div class="navbar-item">
+                <div class="<?php if ($navbar_state == "notif") echo "nav-active" ?> navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
                             <a class="has-text-grey-lighter" href="<?php echo base_url('notification') ?>">
@@ -116,7 +116,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <div class="field is-grouped"></div>
                 </div> -->
 
-                <div class="navbar-item has-dropdown is-hoverable">
+                <div class="<?php if ($navbar_state == "profile") echo "nav-active" ?> navbar-item has-dropdown is-hoverable">
                     <a class="is-grouped">
                         <p class="control">
                             <a class="has-text-grey-lighter" href="">

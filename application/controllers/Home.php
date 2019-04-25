@@ -22,7 +22,8 @@ class Home extends CI_Controller
         }
         $posts = $this->Post->get();
         $data['posts'] = $posts;
-        $this->load->view('navigation_bar');
+        $data['navbar_state'] = "home";
+        $this->load->view('navigation_bar', $data);
         $this->load->view('home_view', $data);
     }
 
