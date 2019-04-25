@@ -36,6 +36,11 @@ class Login extends CI_Controller {
             $this->load->view("login_view", $data);
         }
     }
+
+    public function logout() {
+        $this->session->sess_destroy();
+        header('Location: '.base_url('/login'));
+    }
 }
         
     /* End of file  login.php */

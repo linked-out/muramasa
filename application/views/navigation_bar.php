@@ -141,7 +141,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <a href="" class="button is-danger">Delete Account</a>
                         </div>
                         <hr class="navbar-divider">
-                        <a href="" class="navbar-item">
+                        <a href="<?php echo base_url('/login/logout') ?>" class="navbar-item">
                             Logout
                         </a>
                     </div>
