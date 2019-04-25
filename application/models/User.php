@@ -71,6 +71,9 @@ class User extends CI_Model {
         $this->db->where('user_id', $id);
         $this->db->delete('post');
 
+        $this->db->where('user_id', $id);
+        $this->db->delete('job');
+
         $this->db->where('id', $id);
         $this->db->delete('USER');
     }
