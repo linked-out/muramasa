@@ -105,10 +105,10 @@
                         <div class="modal-card-body">
                             <div class="field">
                                 <input type="text" name="id" id="edit-id" value="" hidden>
-                                <input name="edit-title" class="input" placeholder="Enter Your Job Title"></input>
+                                <input name="title" id="edit-title" class="input" placeholder="Enter Your Job Title"></input>
                             </div>
                             <div class="field">
-                                <input name="edit-company" class="input" placeholder="Enter Your Compnany Name"></input>
+                                <input name="company" id="edit-company" class="input" placeholder="Enter Your Compnany Name"></input>
                             </div>
                         </div>
                         <div class="modal-card-foot">

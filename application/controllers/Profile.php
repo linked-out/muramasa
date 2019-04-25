@@ -41,6 +41,14 @@ class Profile extends CI_Controller {
         $this->Job->delete($id);
         $this->index();
     }
+
+    public function editJob() {
+        $id = $this->input->post('id');
+        $title = $this->input->post('title');
+        $company_name = $this->input->post('company');
+        $this->Job->edit($company_name, $title, $id);
+        $this->index();
+    }
         
 }
         
