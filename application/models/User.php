@@ -12,6 +12,12 @@ class User extends CI_Model {
 
     public function new($user){
         $this->db->insert('USER', $user); 
+
+        if ($this->db->error()) {
+            return false;
+        }
+
+        return true;
     }
 
     public function login($email, $password) {

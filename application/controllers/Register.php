@@ -29,8 +29,13 @@ class Register extends CI_Controller {
             'password' => password_hash($password, PASSWORD_BCRYPT), 
         );
 
-        $this->User->new($user);
-        header('Location: '. base_url('/login'));
+        $success = $this->User->new($user);
+        if ($success) {
+            header('Location: '. base_url('/login'));
+        } else {
+            $data["alert"] = "Registration failed: existed email";
+            $this->load->view("register_view", $data);    
+        }
     }
 }
         

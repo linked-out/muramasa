@@ -76,6 +76,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span>Already on LinkedIn?<a href="" class="is-link">&nbsp; Sign Up</a></span>
         </div>
     </div>
-
+    <?php
+        if (isset($alert)) echo "<script>alert('".$alert."')</script>";
+    ?>
 </body>
 </html>
