@@ -36,6 +36,11 @@ class Profile extends CI_Controller {
         $this->Job->new($job);
         $this->index();
     }
+
+    public function deleteJob($id) {
+        $this->Job->delete($id);
+        $this->index();
+    }
         
 }
         

@@ -73,13 +73,18 @@
                                     </div>
                                     <div class="column" style="border-bottom: solid 1px #ccc">
                                         <div style="margin-bottom: 0" class="columns">
-                                            <strong class="column is-11">'.$job->title.'</strong>
+                                            <strong class="column is-11">' . $job->title . '</strong>
                                             <span>
-                                                <i class="fas fa-minus"></i>
-                                                <i class="fas fa-edit"></i>
+                                                    <a href="' . base_url('profile/deleteJob/' . $job->id) . '"><i class="has-text-danger fas fa-minus"></i></a>
+                                                    &nbsp;
+                                                    <a onClick="triggerEdit(
+                                                        \'' . $job->id . '\',
+                                                        \'' . $job->company_name . '\',
+                                                        \'' . $job->title . '\'
+                                                    )"><i class="has-text-info fas fa-edit"></i></a>
                                             </span>
                                         </div>
-                                        <div class="">'.$job->company_name.'</div>
+                                        <div class="">' . $job->company_name . '</div>
                                     </div>
                                 </div>
                             </div>';
@@ -88,6 +93,39 @@
                 ?>
 
             </div>
+
+
+            <div id="edit-modal" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <div class="modal-card-head">
+                        <button class="delete" aria-label="close"></button>
+                    </div>
+                    <form method="POST" action="<?php echo base_url('profile/editJob') ?>">
+                        <div class="modal-card-body">
+                            <div class="field">
+                                <input type="text" name="id" id="edit-id" value="" hidden>
+                                <input name="edit-title" class="input" placeholder="Enter Your Job Title"></input>
+                            </div>
+                            <div class="field">
+                                <input name="edit-company" class="input" placeholder="Enter Your Compnany Name"></input>
+                            </div>
+                        </div>
+                        <div class="modal-card-foot">
+                            <input type="submit" class="button is-info" value="Submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script>
+                function triggerEdit(id, company_name, title) {
+                    $('#edit-modal').toggleClass('is-active')
+                    $("#edit-modal .delete").click(() => $('#edit-modal').toggleClass('is-active'))
+                    $('#edit-id').val(id)
+                    $('#edit-title').val(title)
+                    $('#edit-company').val(company_name)
+                }
+            </script>
         </div>
     </div>
 
