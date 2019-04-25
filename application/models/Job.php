@@ -23,7 +23,7 @@ class Job extends CI_Model
 
     public function new($job)
     {
-        $this->db->insert('post', $job);
+        $this->db->insert('job', $job);
     }
 
     public function delete($id)

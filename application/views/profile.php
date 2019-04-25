@@ -86,9 +86,8 @@
             <div class="modal-card-head">
                 <button class="delete" aria-label="close"></button>
             </div>
-            <form method="POST" action="<?php echo base_url('home/post') ?>">
+            <form method="POST" action="<?php echo base_url('profile/postJob') ?>">
                 <div class="modal-card-body">
-                    <input name="user_id" type="text" hidden value="<?php $this->session->user->id ?>">
                     <div class="field">
                         <input name="title" class="input" placeholder="Enter Your Job Title"></input>
                     </div>
