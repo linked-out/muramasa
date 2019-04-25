@@ -9,6 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LinkedOut | Login</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"> 
     <style>
         * {
@@ -16,7 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             color: #333;
         } 
 
-        input, .input {
+        input, .form-control {
+            margin: auto;
             width: 300px;
         }
 
@@ -45,10 +47,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <small>Don't miss your next opportunity. Sign in to stay updated on your professional world.</small>
         <form method="POST" action="<?php echo base_url('login/try') ?>" class="form">
             <div class="field">
-                <input name="email" required class="input is-medium" type="email" placeholder="Enter your email">
+                <input name="email" required class="form-control is-medium" type="email" placeholder="Enter your email">
             </div>
             <div class="field">
-                <input name="password" required class="input is-medium" type="password" placeholder="Enter your password">
+                <input name="password" required class="form-control is-medium" type="password" placeholder="Enter your password">
             </div>
             <div class="field">
                 <input class="is-link button is-medium" type="submit" value="Sign In">
