@@ -41,6 +41,12 @@ class Login extends CI_Controller {
         $this->session->sess_destroy();
         header('Location: '.base_url('/login'));
     }
+
+    public function delete() {
+        $id = $this->session->user->id;
+        $this->User->delete($id);
+        $this->logout();
+    }
 }
         
     /* End of file  login.php */

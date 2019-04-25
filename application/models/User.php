@@ -66,6 +66,14 @@ class User extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function delete($id) {
+        $this->db->where('user_id', $id);
+        $this->db->delete('post');
+
+        $this->db->where('id', $id);
+        $this->db->delete('USER');
+    }
 }
                         
 /* End of file User.php */
