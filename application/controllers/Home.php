@@ -1,22 +1,31 @@
-<?php 
-        
-defined('BASEPATH') OR exit('No direct script access allowed');
-        
-class Home extends CI_Controller {
-   public function __construct()
-   {
+<?php
+
+defined('BASEPATH') or exit('No direct script access allowed');
+
+class Home extends CI_Controller
+{
+    public function __construct()
+    {
         parent::__construct();
-        $this->load->model('Post');   
-   }
-    
+        $this->load->model('Post');
+    }
+
     public function index()
     {
+
+        if (isset($this->session->is_login)) {
+            if (!$this->session->is_login) {
+                header('Location: ' . base_url('/login'));
+            }
+        } else {
+            header('Location: ' . base_url('/login'));
+        }
         $posts = $this->Post->get();
         $data['posts'] = $posts;
         $this->load->view('navigation_bar');
-        $this->load->view('home_view', $data);                    
-    }           
-   
+        $this->load->view('home_view', $data);
+    }
+
     public function post()
     {
         $content = $this->input->post('content');
@@ -30,12 +39,14 @@ class Home extends CI_Controller {
         $this->index();
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $this->Post->delete($id);
         $this->index();
     }
 
-    public function edit() {
+    public function edit()
+    {
         $content = $this->input->post('content');
         $id = $this->input->post('id');
 
@@ -46,5 +57,3 @@ class Home extends CI_Controller {
 }
         
     /* End of file  Home.php */
-        
-                            
