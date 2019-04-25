@@ -57,7 +57,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <a href="" class="is-link">Forgot Password?</a><br>
         <span>New to linkedOut? <a href="<?php echo base_url('register') ?>" class="is-link">Join Now</a></span>
     </div>
-
+    <?php
+        if (isset($alert)) {
+            echo "<script>alert('".$alert."')</script>";
+        } 
+    ?>
+    <!-- <script>
+        alert("hello world");
+    </script> -->
     <footer>
             <small>Aplikasi ini dikerjakan sendiri oleh <i class="fab fa-github"></i>  <a href="https://github.com/blinfoldking" class="is-link">blinfoldking</a> </small>
     </footer>

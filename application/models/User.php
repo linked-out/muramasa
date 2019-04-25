@@ -20,7 +20,13 @@ class User extends CI_Model {
         $this->db->where('email =', $email);
 
         $query = $this->db->get();
+
+        if (!isset($query->result()[0])) {
+            return false;
+        }
+        
         $result = $query->result()[0];
+
         if (password_verify($password, $result->PASSWORD)) {
             return true;
         } else {

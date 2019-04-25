@@ -25,7 +25,9 @@ class Login extends CI_Controller {
             $this->session->is_login = true;
             header('Location: '. base_url('/home'));
         } else {
-            header('Location: '. base_url('/register'));
+            $message = "Username or your Password is Incorrect";
+            $data["alert"] = $message;
+            $this->load->view("login_view", $data);
         }
     }
 }
