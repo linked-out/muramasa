@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,12 +8,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <style>
-
         body {
             min-height: 100vh;
             background: rgb(245, 245, 245);
@@ -29,8 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             background: #283e4a;
         }
 
-        .linkedin-grey {
-        }
+        .linkedin-grey {}
 
         .navbar-item {
             padding: .05rem .75rem;
@@ -58,7 +55,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         .nav-active {
             border-bottom: solid white 5px;
         }
-
     </style>
 </head>
 
@@ -116,17 +112,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
 
-                <div class="navbar-item">
-                    <div class="field is-grouped">
+                <!-- <div class="navbar-item">
+                    <div class="field is-grouped"></div>
+                </div> -->
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="is-grouped">
                         <p class="control">
                             <a class="has-text-grey-lighter" href="<?php echo base_url('profile') ?>">
                                 <img src="https://avatars1.githubusercontent.com/u/24368528?s=400&v=4" alt="" class="profile-pic">
                                 <small style="text-align: center">Saya</small>
                             </a>
                         </p>
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Profile
+                        </a>
+                        <a class="navbar-item">
+                            Setting
+                        </a>
+                        <a target="_blank" href="https://github.com/blinfoldking" class="navbar-item">
+                            Upgrade Account
+                        </a>
+                        <hr class="navbar-divider">
+                        <div class="navbar-item">
+                            <a href="" class="button is-danger">Delete Account</a>
+                        </div>
+                        <hr class="navbar-divider">
+                        <a href="" class="navbar-item">
+                            Logout
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-
