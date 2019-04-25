@@ -37,7 +37,7 @@ class Job extends CI_Model
         $this->db->set('title', $title);
         $this->db->set('company_name', $company_name);
         $this->db->where('id', $id);
-        $this->db->update('post');
+        $this->db->update('job');
     }
 }
                         
