@@ -2,15 +2,32 @@
 <div class="columns" style="padding: 80px 20%">
 	<div class="column is-3">
 		<div class="card">
-			<header class="card-header" style="padding: 10px">
-				<div class="media">
+			<div style="background: url(https://via.placeholder.com/1000); height: 90px; background-size: cover">
+				&nbsp;
+			</div>
+			<div style="
+					background: url(https://avatars1.githubusercontent.com/u/24368528?s=400&v=4); 
+					height: 70px; 
+					width: 70px; 
+					border: solid 3px white;
+					border-radius: 50%;
+					background-size: cover;
+					position: absolute;
+					top: 50px;
+					left: calc(50% - 35px);
+				">
+				&nbsp;
+			</div>
+			<header class="card-header" style="padding: 10px; padding-top: 40px;">
+				<div class="media" style="margin: auto">
 					<div class="media-content">
+
 						<?php
 						if (isset($this->session->user)) {
 							$user = $this->session->user;
 							echo
-								'<p class="title is-6">' . $user->firstname . ' ' . $user->lastname . '</p>';
-							echo '<p class="subtitle is-6">' . $user->email . '</p>';
+								'<p class="title is-6" style="text-align: center">' . $user->firstname . ' ' . $user->lastname . '</p>';
+							echo '<p class="subtitle is-6" style="text-align: center">' . $user->email . '</p>';
 						}
 						?>
 					</div>
@@ -45,14 +62,14 @@
 						<p class="title is-6">' . $post->firstname . ' ' . $post->lastname . '</p>
 						<p class="subtitle is-6">' . $post->email . '</p>
 					</div>';
-		if ($post->user_id == $this->session->user->id)
-		echo
+			if ($post->user_id == $this->session->user->id)
+				echo
 					'<div class="media-right">
 						<a href="' . base_url('home/delete/' . $post->id) . '"><i class="fas fa-minus has-text-danger"></i></a>&nbsp;
-						<a onClick="edit('.$post->id.',\''.$post->content.'\')" ><i class="fas fa-edit has-text-info"></i></a>
+						<a onClick="edit(' . $post->id . ',\'' . $post->content . '\')" ><i class="fas fa-edit has-text-info"></i></a>
 					</div>
 				';
-		echo		'
+			echo		'
 		</div>
 				<div class="content">' . $post->content . '</div>
 			</div>
@@ -61,31 +78,31 @@
 		}
 		?>
 		<div id="edit-modal" class="modal">
-		<div class="modal-background"></div>
-		<div class="modal-card">
-			<div class="modal-card-head">
-				<button class="delete" aria-label="close"></button>
+			<div class="modal-background"></div>
+			<div class="modal-card">
+				<div class="modal-card-head">
+					<button class="delete" aria-label="close"></button>
+				</div>
+				<form method="POST" action="<?php echo base_url('home/edit') ?>">
+					<div class="modal-card-body">
+						<input type="text" name="id" id="edit-id" value="" hidden>
+						<textarea name="content" id="edit-content" class="textarea" placeholder="what's on your mind"></textarea>
+					</div>
+					<div class="modal-card-foot">
+						<input type="submit" class="button is-info" />
+					</div>
+				</form>
 			</div>
-			<form method="POST" action="<?php echo base_url('home/edit') ?>">
-				<div class="modal-card-body">
-					<input type="text" name="id" id="edit-id" value="" hidden>
-					<textarea name="content" id="edit-content" class="textarea" placeholder="what's on your mind"></textarea>
-				</div>
-				<div class="modal-card-foot">
-					<input type="submit" class="button is-info" />
-				</div>
-			</form>
 		</div>
-	</div>
-	<script>
-		function edit(id, content) {
-			$('#edit-modal').addClass('is-active');
-			$('#edit-modal .delete').click(() => $('#edit-modal').removeClass('is-active'));
+		<script>
+			function edit(id, content) {
+				$('#edit-modal').addClass('is-active');
+				$('#edit-modal .delete').click(() => $('#edit-modal').removeClass('is-active'));
 
-			$('#edit-content').val(content);
-			$('#edit-id').val(id);
-		}
-	</script>
+				$('#edit-content').val(content);
+				$('#edit-id').val(id);
+			}
+		</script>
 	</div>
 	<div class="column is-3">
 
