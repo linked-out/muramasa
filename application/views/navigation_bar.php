@@ -119,7 +119,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="is-grouped">
                         <p class="control">
-                            <a class="has-text-grey-lighter" href="<?php echo base_url('profile') ?>">
+                            <a class="has-text-grey-lighter" href="">
                                 <img src="https://avatars1.githubusercontent.com/u/24368528?s=400&v=4" alt="" class="profile-pic">
                                 <small style="text-align: center">Saya</small>
                             </a>
@@ -127,7 +127,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="<?php echo base_url('profile') ?>">
                             Profile
                         </a>
                         <a class="navbar-item">
