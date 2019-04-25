@@ -11,6 +11,12 @@ class Login extends CI_Controller {
 
     public function index()
     {
+        if (isset($this->session->is_login)) {
+            if ($this->session->is_login) {
+                header('Location: '. base_url('/home'));
+            }
+        }
+
         $this->load->view("login_view");                    
     }
     
