@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/xampp/muramasa/index.php';
+$config['base_url'] = 'https://muramasa-danu.herokuapp.com/index.php';
 
 /*
 |--------------------------------------------------------------------------
